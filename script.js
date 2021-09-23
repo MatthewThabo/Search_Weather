@@ -2,7 +2,7 @@ let weather = {
     "apiKey": "81099eda9f919e74206ae1a79fe2f797",
     fetchWeather: function (city) {
         fetch(
-            "http://api.openweathermap.org/data/2.5/weather?q=" 
+            "https://api.openweathermap.org/data/2.5/weather?q=" 
             + city 
             + "&units=metric&appid=" 
             + this.apiKey
@@ -21,7 +21,7 @@ let weather = {
         document.querySelector(".temp").innerText = temp + "°C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind speed: " + speed + " Km/h";
-        // document.querySelector(".weather").classList.remove("loading");
+        document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
     },
     search: function() {
